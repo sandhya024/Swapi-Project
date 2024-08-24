@@ -1,0 +1,38 @@
+<div class="header">
+  <h1>STAR WARS</h1>
+  <h6>THE SWAPI PROJECT</h6>
+</div>
+<div class="charcterListSection">
+  <div class="filterSection">
+    <app-filter (filtersChanged)="filterCharacters($event)"></app-filter>
+  </div>
+
+  <div class="tableSection">
+    <div>
+      <h4>SEARCH RESULTS</h4>
+    </div>
+    <table style="width: 100%;">
+      <thead>
+        <tr style="width: 100%;background-color: #c7cfce;">
+          <th style="width: 10%;">Serial No</th>
+          <th style="width: 30%;">Character Name</th>
+          <th style="width: 20%;">Species</th>
+          <th style="width: 20%;">Birth Year</th>
+          <th style="width: 20%;">View Details</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let character of filteredCharacters" style="width: 100%;background-color: #e8efee;">
+          <td style="width: 10%;">{{ character.url.split('/')[5] }}</td>
+          <td style="width: 30%;">{{ character.name }}</td>
+          <td style="width: 20%;">{{ character.species.join(', ') }}</td>
+          <td style="width: 20%;">{{ character.birth_year }}</td>
+          <td style="width: 20%;">
+            <i class="pi pi-eye" style="font-size: 20px" (click)="viewCharacterDetails(character)"></i>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

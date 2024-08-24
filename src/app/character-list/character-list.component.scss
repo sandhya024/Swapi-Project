@@ -1,0 +1,37 @@
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #0ba50b;
+    color: white;
+  }
+  .charcterListSection{
+    display: flex;
+    background-color: #e8efee;
+    padding: 42px 38px;
+  }
+
+  .filterSection{
+    width: 30%;
+    background-color: white;
+    margin-right: 12px;
+    padding: 18px;
+  }
+
+  .tableSection{
+    width: 70%;
+    background-color: white;
+    padding: 18px;
+  }
+  
+  h4{
+    color: #0ba50b;
+  }
+  th{
+    text-align: left;
+  }
+  th,td{
+    padding: 8px;
+  }

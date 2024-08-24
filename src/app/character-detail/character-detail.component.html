@@ -1,0 +1,68 @@
+<div class="header" *ngIf="character">
+  <h1>STAR WARS</h1>
+  <h6>THE SWAPI PROJECT</h6>
+</div>
+<div *ngIf="character" class="detailSection">
+  <div class="leftSection">
+    <div class="iconSection">
+      <i class="pi pi-globe"></i>
+    </div>
+    
+    <h2>Name: {{ character.name }}</h2>
+    <p><strong>Hair Color:</strong> {{ character.hair_color }}</p>
+    <p><strong>Gender:</strong> {{ character.gender }}</p>
+    <p><strong>Height:</strong> {{ character.height }}</p>
+    <p><strong>Weight:</strong> {{ character.mass }}</p>
+    <p><strong>Skin color:</strong> {{ character.skin_color }}</p>
+    <p><strong>eye Color</strong> {{ character.eye_color}}</p>
+    <p><strong>Birth Year:</strong> {{ character.birth_year}}</p>
+  </div>
+
+  <!-- <div class="rightSection">
+    <h3>Films</h3>
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{ movie.title }} ({{ movie.release_date }})
+      </li>
+    </ul>
+
+    <h3>Vehicles</h3>
+    <ul>
+      <li *ngFor="let vehicle of vehicles">
+        {{ vehicle.name }} - {{ vehicle.model }}
+      </li>
+    </ul>
+
+    <h3>Starships</h3>
+    <ul>
+      <li *ngFor="let starship of starships">
+        {{ starship.name }} - {{ starship.model }}
+      </li>
+    </ul>
+    <button (click)="backHome()">Back Home</button>
+  </div> -->
+  <div class="rightSection">
+    <h3>Films</h3>
+    <ul>
+      <li *ngFor="let movie of movies">
+        {{ movie.title }} ({{ movie.release_date }})
+      </li>
+    </ul>
+  
+    <h3>Vehicles</h3>
+    <ul>
+      <li *ngFor="let vehicle of vehicles">
+        {{ vehicle.name }} - {{ vehicle.model }}
+      </li>
+    </ul>
+  
+    <h3>Starships</h3>
+    <ul>
+      <li *ngFor="let starship of starships">
+        {{ starship.name }} - {{ starship.model }}
+      </li>
+    </ul>
+    <button (click)="backHome()">Back Home</button>
+  </div>
+  
+</div>

@@ -1,0 +1,53 @@
+<div>
+  <h3>FILTERS</h3>
+  <div class="dropdownSection">
+    <label for="movie">Movie Name</label>
+    <br>
+    <select id="movie" [(ngModel)]="selectedMovie">
+      <option [ngValue]="null">Any</option>
+      <option *ngFor="let movie of movies" [value]="movie">{{ movie }}</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="dropdownSection">
+    <label for="species">Species</label>
+    <br>
+    <select id="species" [(ngModel)]="selectedSpecies">
+      <option [ngValue]="null">Any</option>
+      <option *ngFor="let specie of species" [value]="specie">{{ specie }}</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="dropdownSection">
+    <label for="vehicle">Vehicle</label>
+    <br>
+    <select id="vehicle" [(ngModel)]="selectedVehicle">
+      <option [ngValue]="null">Any</option>
+      <option *ngFor="let vehicle of vehicles" [value]="vehicle">{{ vehicle }}</option>
+    </select>
+  </div>
+  <br>
+
+  <div class="dropdownSection">
+    <label for="starship">Starship</label>
+    <br>
+    <select id="starship" [(ngModel)]="selectedStarship">
+      <option [ngValue]="null">Any</option>
+      <option *ngFor="let starship of starships" [value]="starship">{{ starship }}</option>
+    </select>
+  </div>
+  <br>
+  <div class="dropdownSection">
+    <label for="birthYear">Birth Year</label>
+    <br>
+    <select id="birthYear" [(ngModel)]="selectedBirthYear">
+      <option *ngFor="let year of birthYears" [value]="year">{{ year }}</option>
+    </select>
+  </div>
+  <br>
+
+
+  <button (click)="applyFilters()">SEARCH</button>
+</div>
